@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moussa Fanta Keita — Site personnel</title>
+  <meta name="description" content="Site personnel de Moussa Fanta Keita : profil, services, projets, contact." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#top">MFK</a>
+      <nav class="menu">
+        <a href="#apropos">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="tag">👋 Bonjour, je suis</p>
+          <h1>Moussa Fanta Keita</h1>
+          <p class="lead">
+            Décris-toi en 1 phrase. Exemple : Analyste / Développeur R & Shiny / Consultant data.
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="#contact">Me contacter</a>
+            <a class="btn" href="#projets">Voir mes projets</a>
+          </div>
+
+          <div class="badges">
+            <span>R</span><span>Shiny</span><span>Excel</span><span>Data</span>
+          </div>
+        </div>
+
+        <div class="card photo">
+          <!-- Remplace l'image par la tienne : mets une image "photo.jpg" dans le dossier -->
+          <img src="photo.jpg" alt="Photo de Moussa Fanta Keita" onerror="this.style.display='none'" />
+          <div class="placeholder">
+            <div class="circle"></div>
+            <p>Ajoute une photo : <code>photo.jpg</code></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos" class="section">
+      <div class="container">
+        <h2>À propos</h2>
+        <p>
+          Écris 5–8 lignes sur toi : ton parcours, tes compétences, ce que tu cherches, et ce que tu aimes faire.
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Compétence 1</h3>
+            <p>Ex: Tableaux de bord Shiny, automatisation de rapports.</p>
+          </div>
+          <div class="card">
+            <h3>Compétence 2</h3>
+            <p>Ex: Analyse de données, KPIs, visualisation.</p>
+          </div>
+          <div class="card">
+            <h3>Compétence 3</h3>
+            <p>Ex: Formation, accompagnement, documentation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section alt">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Dashboard & reporting</h3>
+            <p>Création de dashboards (Shiny) et rapports automatisés.</p>
+          </div>
+          <div class="card">
+            <h3>Analyse & KPIs</h3>
+            <p>Nettoyage, analyse, indicateurs, suivi de performance.</p>
+          </div>
+          <div class="card">
+            <h3>Coaching</h3>
+            <p>Formation R / Shiny pas à pas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="section">
+      <div class="container">
+        <h2>Projets</h2>
+        <p>Ajoute 3–6 projets. Même si c’est un prototype, c’est OK.</p>
+
+        <div class="grid-3">
+          <article class="card project">
+            <h3>Projet 1</h3>
+            <p>Une phrase : problème → solution → résultat.</p>
+            <div class="links">
+              <a href="#" target="_blank" rel="noreferrer">Démo</a>
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <h3>Projet 2</h3>
+            <p>Ex: Dashboard ventes, suivi stock, RH, etc.</p>
+            <div class="links">
+              <a href="#" target="_blank" rel="noreferrer">Démo</a>
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <h3>Projet 3</h3>
+            <p>Ex: Analyse + visualisation + recommandations.</p>
+            <div class="links">
+              <a href="#" target="_blank" rel="noreferrer">Démo</a>
+              <a href="#" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Tu peux me contacter ici :</p>
+
+        <div class="contact-card card">
+          <p><strong>Email :</strong> <a href="mailto:moussafanta.keita@gmail.com">moussafanta.keita@gmail.com</a></p>
+          <p><strong>WhatsApp :</strong> <a href="#">+224 …</a></p>
+          <p><strong>LinkedIn :</strong> <a href="#" target="_blank" rel="noreferrer">Ton lien</a></p>
+
+          <form class="form" onsubmit="return sendFake(event)">
+            <div class="row">
+              <label>Nom
+                <input required name="name" placeholder="Ton nom" />
+              </label>
+              <label>Email
+                <input required type="email" name="email" placeholder="ton@email.com" />
+              </label>
+            </div>
+
+            <label>Message
+              <textarea required name="message" rows="4" placeholder="Écris ton message..."></textarea>
+            </label>
+
+            <button class="btn primary" type="submit">Envoyer</button>
+            <p class="hint" id="hint"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Moussa Fanta Keita — Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    // menu mobile
+    const burger = document.querySelector(".burger");
+    const menu = document.querySelector(".menu");
+    burger?.addEventListener("click", () => {
+      const open = menu.classList.toggle("open");
+      burger.setAttribute("aria-expanded", String(open));
+    });
+
+    // année auto
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // faux envoi (pour un vrai formulaire, je te donne une solution ensuite)
+    function sendFake(e) {
+      e.preventDefault();
+      document.getElementById("hint").textContent =
+        "✅ Message prêt. Pour recevoir vraiment les messages, je te configure un formulaire (Formspree / Netlify Forms).";
+      e.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
